@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Drowsiness Detection</title>
+    <link rel="stylesheet" href="/static/css/start.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Driver Drowsiness Detection System</h1>
+        <p>Please upload an image to start the detection process.</p>
+
+        <!-- Upload Form -->
+        <form id="uploadForm" enctype="multipart/form-data" method="POST">
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <!-- Image Display Section -->
+        <div id="imageDisplay" style="display: none;">
+            <h3>Original Image:</h3>
+            <img id="uploadedImage" src="" alt="Uploaded Image" width="300">
+            
+            <h3>Processed Image:</h3>
+            <img id="processedImage" src="" alt="Processed Image" width="300">
+        </div>
+
+        <!-- Predict Button Section -->
+        <div id="predictSection" style="display: none;">
+            <button id="predictButton">Predict</button>
+        </div>
+
+        <!-- Prediction Result Section -->
+        <div id="predictionResult" style="display: none;">
+            <h3>Prediction Result:</h3>
+            <p id="resultText"></p>
+        </div>
+
+        <!-- Home Button -->
+        <div class="home">
+            <button type="button"><a href="/">Home</a></button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/static/js/start.js"></script>
+</body>
+</html>
